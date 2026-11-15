@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* Custom scrollbar for mobile viewports */
+.mobile-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.mobile-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.mobile-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(0, 46, 110, 0.2);
+  border-radius: 4px;
+}
