@@ -13,7 +13,7 @@ const adminPasswordHash = bcryptjs.hashSync('admin123', 10);
 export function createSeedData(): DB {
   // Pre-seed 12 diverse personal loan applications across Salaried and Self-Employed categories
   const rawApplications: any[] = [
-    // 1. Rahul Sharma (Self-Employed — Active Demo User FNX-DEMO-1001)
+    // 1. Ankit Sharma (Self-Employed — Active Demo User FNX-DEMO-1001)
     {
       id: 'FNX-DEMO-1001',
       merchantId: 'merchant-1',
@@ -25,9 +25,9 @@ export function createSeedData(): DB {
       requiredTenureMonths: 12,
       cibilScore: 752,
       personalDetails: {
-        fullName: 'Rahul Sharma',
+        fullName: 'Ankit Sharma',
         mobileNumber: '9876543210',
-        email: 'rahul.sharma@email.com',
+        email: 'ankit.sharma@email.com',
         dateOfBirth: '1988-05-15',
         panNumber: 'AXXPS1234C',
         address: '45 Market Road, Kothrud',
@@ -49,7 +49,7 @@ export function createSeedData(): DB {
         recentBouncesCount: 0
       },
       bankDetails: {
-        accountHolderName: 'Rahul Sharma',
+        accountHolderName: 'Ankit Sharma',
         bankName: 'State Bank of India',
         accountNumber: '38291023456',
         maskedAccountNumber: 'XXXXXXX3456',
@@ -561,7 +561,7 @@ export function createSeedData(): DB {
 
   return {
     users: [
-      { id: 'user-merchant-1', mobile: '9876543210', name: 'Rahul Sharma', role: 'merchant', merchantId: 'merchant-1', passwordHash: defaultPasswordHash, otp: '123456', otpExpiry: new Date(Date.now() + 3600000).toISOString(), createdAt: daysAgo(90) },
+      { id: 'user-merchant-1', mobile: '9876543210', name: 'Ankit Sharma', role: 'merchant', merchantId: 'merchant-1', passwordHash: defaultPasswordHash, otp: '123456', otpExpiry: new Date(Date.now() + 3600000).toISOString(), createdAt: daysAgo(90) },
       { id: 'user-ananya-1', mobile: '9822011223', name: 'Ananya Deshmukh', role: 'normal_user', merchantId: null, passwordHash: defaultPasswordHash, otp: '123456', otpExpiry: new Date(Date.now() + 3600000).toISOString(), createdAt: daysAgo(45) },
       { id: 'user-admin-1', mobile: '9999999999', name: 'Lender Credit Underwriter', role: 'admin', passwordHash: adminPasswordHash, otp: '123456', otpExpiry: new Date(Date.now() + 3600000).toISOString(), createdAt: daysAgo(180) },
       { id: 'user-support-1', mobile: '9999999998', name: 'Support Copilot Agent', role: 'support_agent', passwordHash: defaultPasswordHash, otp: '123456', otpExpiry: new Date(Date.now() + 3600000).toISOString(), createdAt: daysAgo(120) },
@@ -569,7 +569,7 @@ export function createSeedData(): DB {
     merchants: [],
     applications,
     applicationEvents: [
-      { id: 'evt-001', applicationId: 'FNX-DEMO-1001', type: 'APPLICATION_CREATED', description: 'Self-employed personal loan journey started', timestamp: daysAgo(5), actor: 'Rahul Sharma' },
+      { id: 'evt-001', applicationId: 'FNX-DEMO-1001', type: 'APPLICATION_CREATED', description: 'Self-employed personal loan journey started', timestamp: daysAgo(5), actor: 'Ankit Sharma' },
       { id: 'evt-002', applicationId: 'FNX-DEMO-1001', type: 'DOCUMENT_VALIDATION_FAILED', description: 'Bank statement page 2 has low clarity / blurry OCR', timestamp: daysAgo(3), actor: 'system', metadata: { page: 2, issue: 'Blurry' } },
       { id: 'evt-003', applicationId: 'FNX-SAL-1002', type: 'APPLICATION_CREATED', description: 'Salaried personal loan journey started', timestamp: daysAgo(3), actor: 'Ananya Deshmukh' },
       { id: 'evt-004', applicationId: 'FNX-SAL-1002', type: 'CHECKLIST_EVALUATED', description: 'Salaried checklist evaluated: 92/100 (SHORTLIST_RECOMMENDED)', timestamp: daysAgo(2), actor: 'system' }

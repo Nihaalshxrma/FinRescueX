@@ -113,7 +113,7 @@ export const LoginPage: React.FC = () => {
                   />
                 </div>
                 <p className="text-[11px] text-slate-400 mt-1">
-                  Demo number: 9876543210 (Rahul Sharma)
+                  Demo number: 9876543210 (Ankit Sharma)
                 </p>
               </div>
 
@@ -182,7 +182,7 @@ export const LoginPage: React.FC = () => {
               className="w-full bg-sky-50 hover:bg-sky-100 text-paytm-blue border border-sky-200 py-2.5 px-3 rounded-xl text-xs font-semibold flex items-center justify-center gap-2 transition"
             >
               <UserCheck className="w-4 h-4 text-paytm-sky" />
-              Login as Rahul Sharma (Demo Merchant)
+              Login as Ankit Sharma (Demo Merchant)
             </button>
             <button
               onClick={handleAdminQuickLogin}

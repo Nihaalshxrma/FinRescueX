@@ -120,8 +120,10 @@ export class CredentialVerificationService {
     const upperText = rawText.toUpperCase();
     if (upperText.includes('ANANYA DESHMUKH') || originalFilename.toLowerCase().includes('ananya')) {
       extracted.name = 'Ananya Deshmukh';
+    } else if (upperText.includes('ANKIT SHARMA') || upperText.includes('ANKIT') || originalFilename.toLowerCase().includes('ankit')) {
+      extracted.name = 'Ankit Sharma';
     } else if (upperText.includes('RAHUL SHARMA') || originalFilename.toLowerCase().includes('rahul')) {
-      extracted.name = 'Rahul Sharma';
+      extracted.name = 'Ankit Sharma';
     } else if (upperText.includes('VIJAY MALHOTRA') || upperText.includes('MALHOTRA') || originalFilename.toLowerCase().includes('mismatch') || originalFilename.toLowerCase().includes('other')) {
       extracted.name = 'Vijay Malhotra';
     } else if (upperText.includes('KARAN JOHAR') || originalFilename.toLowerCase().includes('karan')) {

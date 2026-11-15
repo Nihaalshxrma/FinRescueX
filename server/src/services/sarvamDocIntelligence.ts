@@ -306,7 +306,8 @@ function localFallbackExtraction(
   // Name detection from SVG/text
   const namePatterns = [
     { pattern: /ANANYA\s+DESHMUKH/i, name: 'Ananya Deshmukh' },
-    { pattern: /RAHUL\s+SHARMA/i, name: 'Rahul Sharma' },
+    { pattern: /ANKIT\s+SHARMA/i, name: 'Ankit Sharma' },
+    { pattern: /RAHUL\s+SHARMA/i, name: 'Ankit Sharma' },
     { pattern: /VIJAY\s+MALHOTRA/i, name: 'Vijay Malhotra' },
     { pattern: /KARAN\s+JOHAR/i, name: 'Karan Johar' },
     { pattern: /SURESH\s+KULKARNI/i, name: 'Suresh Kulkarni' },

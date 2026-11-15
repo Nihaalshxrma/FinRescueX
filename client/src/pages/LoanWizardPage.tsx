@@ -196,13 +196,13 @@ export const LoanWizardPage: React.FC = () => {
     } else {
       setPersonal((prev: any) => ({
         ...prev,
-        fullName: 'Rahul Sharma',
-        email: 'rahul.sharma@gmail.com',
+        fullName: 'Ankit Sharma',
+        email: 'ankit.sharma@gmail.com',
         panNumber: 'AXXPS1234C'
       }));
       setBank((prev: any) => ({
         ...prev,
-        accountHolderName: 'Rahul Sharma',
+        accountHolderName: 'Ankit Sharma',
         bankName: 'State Bank of India',
         accountType: 'CURRENT'
       }));
@@ -1062,7 +1062,7 @@ export const LoanWizardPage: React.FC = () => {
                     onClick={() => handleTestSample('PAN_CARD_MATCHED')}
                     className="p-1.5 bg-emerald-50 hover:bg-emerald-100 border border-emerald-300 rounded-lg font-bold text-emerald-800 text-left transition flex items-center justify-between"
                   >
-                    <span>✓ Valid PAN ({category === 'SALARIED' ? 'Ananya' : 'Rahul'})</span>
+                    <span>✓ Valid PAN ({category === 'SALARIED' ? 'Ananya' : 'Ankit'})</span>
                     <span className="text-[8px] bg-emerald-200 px-1 py-0.2 rounded font-mono">MATCH</span>
                   </button>
 
