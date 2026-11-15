@@ -27,6 +27,7 @@ export const HomePage: React.FC = () => {
   const navigate = useNavigate();
   const { user, merchant, userMode } = useAuth();
   const isMerchant = userMode === 'MERCHANT';
+  const firstName = isMerchant ? 'Ankit' : (user?.name?.replace(/Rahul/gi, 'Ankit')?.split(' ')[0] || 'Customer');
 
   return (
     <MobileShell title={isMerchant ? 'Merchant Hub' : 'Paytm User Dashboard'}>
@@ -50,14 +51,14 @@ export const HomePage: React.FC = () => {
                 )}
               </div>
               <h2 className="text-lg font-bold mt-0.5">
-                Namaste, {user?.name?.split(' ')[0] || (isMerchant ? 'Ankit' : 'Customer')}!
+                Namaste, {firstName}!
               </h2>
               <p className="text-[11px] text-sky-200/90">
                 {isMerchant ? 'Pune, Maharashtra • Soundbox Active' : 'Pune • UPI Linked • KYC Ready'}
               </p>
             </div>
             <div className="w-11 h-11 bg-white/10 rounded-full border border-white/20 flex items-center justify-center font-bold text-sky-300 shadow-inner">
-              {user?.name?.charAt(0) || (isMerchant ? 'A' : 'U')}
+              {firstName.charAt(0)}
             </div>
           </div>
 
